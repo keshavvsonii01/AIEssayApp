@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/runner/AIContent/app/layout\":[\"static/media/fecd49444dc23b7a.p.woff2\"]},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
