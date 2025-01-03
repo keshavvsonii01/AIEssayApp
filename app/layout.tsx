@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { Bodoni_Moda } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const bodoniModa = Bodoni_Moda({
+  subsets: ['latin'],        // Specify subsets (e.g., latin, latin-ext)
+  weight: ['400', '700'],    // Specify font weights you need
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bodoniModa.className}>{children}</body>
     </html>
   )
 }
