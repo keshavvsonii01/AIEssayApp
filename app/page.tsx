@@ -144,17 +144,17 @@ export default function Home() {
               <div className="flex space-x-2">
                 <button
                   onClick={() => navigator.clipboard.writeText(content)}
-                  className="flex items-center bg-green-400 text-white px-3 py-2 rounded hover:bg-green-500 transition duration-300"
+                  className="flex items-center bg-green-400 text-white px-3 py-2 rounded hover:bg-green-500 transition duration-300 w-12 md:w-auto"
                 >
-                  <Copy className="mr-2 text-sm md:text-lg" />
-                  Copy Content
+                  <Copy className="mr-2 " />
+                  
                 </button>
                 <button
                   onClick={() => handleGenerate(true)}
-                  className="flex items-center bg-blue-400 text-white px-3 py-2 rounded hover:bg-blue-500 transition duration-300"
+                  className="flex items-center bg-blue-400 text-white px-3 py-2 rounded hover:bg-blue-500 transition duration-300 w-12 md:w-auto"
                 >
-                  <Repeat className="mr-2 text-sm md:text-lg" />
-                  Regenerate
+                  <Repeat className="mr-2" />
+                  
                 </button>
               </div>
             </div>
