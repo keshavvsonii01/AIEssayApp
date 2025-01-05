@@ -102,19 +102,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#151414] flex flex-col items-center justify-center p-4">
 
-        <h1 className="text-6xl font-bold text-center text-[#e9e3e3] mb-20">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-[#e9e3e3] mb-20">
           {/* Academic Content Generator */}
           ACADEMIC ESSAY GENERATOR
         </h1>
 
-      <div className="w-full max-w-3xl bg-[#DCD2D2] rounded-xl shadow-2xl p-14">
+      <div className="w-full max-w-3xl bg-[#DCD2D2] rounded-xl shadow-2xl p-8 md:p-[11] lg:p-14">
         <div className="mb-6 flex items-center justify-center">
           <input
             type="text"
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
             placeholder="Enter research topic or keywords..."
-            className="w-5/6 p-3 border-2 border-[#000] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0c0c0c] text-black bg-[#f0ecec] mb-4"
+            className="w-5/6 p-2 md:p-3 border-2 border-[#000] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0c0c0c] text-black bg-[#f0ecec] mb-2 md:mb-4"
           />
         </div>
 
@@ -128,7 +128,7 @@ export default function Home() {
         <button
           onClick={() => handleGenerate(false)}
           disabled={isLoading}
-          className="w-1/2 bg-[#303030] text-[#DCD2D2] p-3 rounded-lg flex items-center justify-center hover:bg-[#060f19] transition duration-300 ease-in-out disabled:opacity-50"
+          className="w-3/5 md:w-1/2 md:text-md  bg-[#303030] text-[#DCD2D2] p-2 md:p-3 rounded-lg flex items-center justify-center hover:bg-[#060f19] transition duration-300 ease-in-out disabled:opacity-50 text-sm"
         >
           {isLoading ? "Generating..." : "Generate Essay"}
           <Send className="ml-2" />
@@ -136,9 +136,9 @@ export default function Home() {
         </div>
 
         {generatedContent && (
-          <div className="mt-6 p-4 bg-[#FDF0F0] rounded-lg border-2 border-[#08121f]">
+          <div className="mt-6 p-3 bg-[#FDF0F0] rounded-lg border-2 border-[#08121f]">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold text-black flex items-center">
+              <h2 className="text-sm md:text-xl font-semibold text-black flex items-center">
                 <BookOpen className="mr-2" /> Generated Content
               </h2>
               <div className="flex space-x-2">
@@ -146,14 +146,14 @@ export default function Home() {
                   onClick={() => navigator.clipboard.writeText(content)}
                   className="flex items-center bg-green-400 text-white px-3 py-2 rounded hover:bg-green-500 transition duration-300"
                 >
-                  <Copy className="mr-2" />
+                  <Copy className="mr-2 text-sm md:text-lg" />
                   Copy Content
                 </button>
                 <button
                   onClick={() => handleGenerate(true)}
                   className="flex items-center bg-blue-400 text-white px-3 py-2 rounded hover:bg-blue-500 transition duration-300"
                 >
-                  <Repeat className="mr-2" />
+                  <Repeat className="mr-2 text-sm md:text-lg" />
                   Regenerate
                 </button>
               </div>
@@ -169,7 +169,7 @@ export default function Home() {
 
             <div className="mt-4 border-t pt-4">
               <h3 className="text-lg font-semibold text-[#08121f] mb-2">
-                References
+                References : 
               </h3>
               <ul className="list-disc list-inside text-gray-800">
                 {generatedContent.references.map((ref, index) => (
