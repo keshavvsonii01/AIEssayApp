@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const { keywords } = await request.json() as GenerateRequestBody;
 
     // Initialize the Gemini API client
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || 'AIzaSyAzKBNNc_R4LT1m9a-lgobBUzqPQ2t_GaY');
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     // Enhanced prompt with academic tone
