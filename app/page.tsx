@@ -1,8 +1,8 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { AlertCircle, Send, BookOpen, Copy, Repeat } from "lucide-react";
-import ReactQuill from "react-quill";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
 
 interface GeneratedContent {
